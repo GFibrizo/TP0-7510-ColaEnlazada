@@ -13,7 +13,7 @@ import queue.Queue;
  */
 public class LinkedList implements Queue {
     
-    private Node first;
+    private Node first = null;
     
     public LinkedList() {
         first = new Header();
@@ -41,6 +41,6 @@ public class LinkedList implements Queue {
     
     @Override
     public void remove() {
-        
+        first.erase(null);
     }
 }

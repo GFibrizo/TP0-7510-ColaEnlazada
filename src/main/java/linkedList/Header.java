@@ -12,8 +12,7 @@ package linkedList;
  */
 public class Header implements Node {
 
-    private Node node;
-    private Node next;
+    private Node next = null;
     
     public Header() {
         next = new NodeWithoutData();
@@ -24,6 +23,7 @@ public class Header implements Node {
         return (0 + next.size());
     }
 
+    @Override
     public void insertData(Node previous, Object data) {
         next.insertData(this, data);
     }
@@ -45,7 +45,12 @@ public class Header implements Node {
     
     @Override
     public void erase(Node previous) {
-        next.erase(null);
+        next.jumpToNextNode(this);
+    }
+    
+    @Override
+    public void jumpToNextNode(Node previous) {
+        throw new UnsupportedOperationException("Not supported operation");
     }
     
 }
