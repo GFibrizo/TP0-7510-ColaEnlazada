@@ -35,12 +35,17 @@ public class Header implements Node {
 
     @Override
     public Node getNext() {
-        throw new AssertionError("There are no elements");
+        return next;
     }
 
     @Override
     public void setNext(Node next) {
         throw new UnsupportedOperationException("Not supported operation");
+    }
+    
+    @Override
+    public void erase(Node previous) {
+        next.erase(null);
     }
     
 }

@@ -49,4 +49,9 @@ public class NodeWithData implements Node {
         return next.getData();
     }
     
+    @Override
+    public void erase(Node previous) {
+        previous.setNext(next);
+    }
+    
 }

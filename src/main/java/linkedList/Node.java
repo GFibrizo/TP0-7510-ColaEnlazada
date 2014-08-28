@@ -22,4 +22,6 @@ public interface Node {
     public Node getNext();
     
     public void setNext(Node next);
+    
+    public void erase(Node previous);
 }

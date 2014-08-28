@@ -26,7 +26,7 @@ public class NodeWithoutData implements Node {
     }
     
     @Override
-    public Node getNext() throws UnsupportedOperationException {
+    public Node getNext() {
         throw new UnsupportedOperationException("This node doesn't have next");
     }
        
@@ -36,7 +36,12 @@ public class NodeWithoutData implements Node {
     }
     
     @Override
-    public Object getData() throws UnsupportedOperationException {
+    public Object getData() {
         throw new UnsupportedOperationException("This node has no data");
+    }
+    
+    @Override
+    public void erase(Node previous) {
+        throw new AssertionError("There are no elements to remove");
     }
 }

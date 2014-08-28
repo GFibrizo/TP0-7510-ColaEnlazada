@@ -36,7 +36,7 @@ public class LinkedList implements Queue {
     
     @Override
     public Object top() {
-        return first.getData();
+        return (first.getNext()).getData();
     }
     
     @Override
