@@ -46,17 +46,12 @@ public class NodeWithData implements Node {
     
     @Override
     public Object getData() {
-        return next.getData();
+        return data;
     }
     
     @Override
     public void erase(Node previous) {
-        next.erase(previous.getNext());
-    }
-    
-    @Override
-    public void jumpToNextNode(Node previous) {
-        next.erase(previous);
+        previous.setNext(next);
     }
     
 }

@@ -40,17 +40,12 @@ public class Header implements Node {
 
     @Override
     public void setNext(Node next) {
-        throw new UnsupportedOperationException("Not supported operation");
+        this.next = next;
     }
     
     @Override
     public void erase(Node previous) {
-        next.jumpToNextNode(this);
+        next.erase(this);
     }
-    
-    @Override
-    public void jumpToNextNode(Node previous) {
-        throw new UnsupportedOperationException("Not supported operation");
-    }
-    
+        
 }

@@ -37,16 +37,13 @@ public class NodeWithoutData implements Node {
     
     @Override
     public Object getData() {
-        throw new UnsupportedOperationException("This node has no data");
+        throw new AssertionError("This node has no data");
     }
     
     @Override
     public void erase(Node previous) {
-        previous.setNext(this);
-    }
-    
-        @Override
-    public void jumpToNextNode(Node previous) {
         throw new AssertionError("There are no elements to remove");
+        //previous.setNext(this);
     }
+
 }
