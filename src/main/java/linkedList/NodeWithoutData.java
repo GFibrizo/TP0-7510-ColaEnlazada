@@ -43,7 +43,6 @@ public class NodeWithoutData implements Node {
     @Override
     public void erase(Node previous) {
         throw new AssertionError("There are no elements to remove");
-        //previous.setNext(this);
     }
 
 }
